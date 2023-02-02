@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    
+    <script >
+        let rasha = true;
+    let word ;
+    let str;
+    function subString(str,n){
+	    for (let len = 1; len <= n; len++) {
+		    for (let i = 0; i <= n - len; i++) {
+			    let j = i + len - 1;
+			    for (let k = i; k <= j; k++) {
+				    document.write(str[k]);
+			    }
+			    document.write("<br>");
+		    }
+	    }
+    }
+while(rasha === true){	
+	word = prompt("Enter a string or an empty string to terminate the program");
+	str= word;
+
+ 	if(str.length === 0){
+		 document.write("</br> Done! ");
+	 	rasha = false;
+ 		}
+ 	else{
+		subString(str, str.length);
+ 	}
+}
+    </script>
+</body>
+</html>

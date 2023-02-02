@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q1</title>
+    
+</head>
+<body>
+    <script>
+        var term = parseInt(window.prompt("Enter number of terms: "))
+
+while (term <= 0){
+    window.alert("Error: Zero or negative number of terms not accepted")
+    term = parseInt(window.prompt("Enter number of terms: "))
+ }
+
+var x = parseFloat(window.prompt("Enter the value of x in the interval (-1, 1]: "))
+while (-1>=x || x> 1){
+    window.alert("Error: Invalid value for x")
+    x = parseFloat(window.prompt("Enter the value of x in the interval (-1, 1]: "))
+}
+
+
+var sum = 0
+for (var i = 0 ; i<= term ; i++){
+    sum = sum + ((-1)**i) * ((x **(i+1))/(i+1))
+}
+
+document.write('The approximate value of ln(1+'+ x +') up to '+term +' terms is '+ sum);
+    </script>
+ 
+</body>
+</html>
